@@ -78,3 +78,10 @@
   - The instances/nodes running on staging should be destroyed after the production release cycle to save costs on Infra. ( Destruction of staging environment can be easily handled through Terraform )
   - Also Production k8s nodes and AWS EC2 instances should be reserved instances to save costs.
 
+### Objective 4
+
+  - For viewing logs of all 3 environments, we will use ELK ( ELastisearch Logstash Kibana) stack.
+  - We will need to deploy filebeat as a sidecar container in microservices which will send logs to centralized server whcih is configured to Kibana dashboard.
+  - Kibana dashboard will show the logs for all environments.
+
+
