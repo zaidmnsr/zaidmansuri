@@ -1,4 +1,4 @@
-# ORMAE Microservices App
+# Microservices App
 
 
 #### Below are components of Application.
