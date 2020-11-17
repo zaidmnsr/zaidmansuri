@@ -69,5 +69,12 @@
   - Push Image to AWS ECR 
   - Deploy to k8s cluster
 
+### Objective 3
 
- 
+  - UAT Deployment will be similar to dev environment ( Can remove Dev environment to reduce cost ). All tests mentioned above in *Objective 1* will be included in this pipeline. If planning to keep dev environment, then we can use Choice parameters in Jenkins to deploy to that environment.
+  - Create a promotion job in jenkins to deploy the code to Staging and Production environment. Production deployment step will need approval to proceed. ( Staging and Production parameters will be handled by environment variables and Choice parameters inside Jenkins Job)
+  - The Staging environment docker image will be the latest pushed in registry for UAT environment. Here it will be re-tagged to bifurcate for Staging environment.
+  - The Production environment docker image will be latest pushed to registry for staging environment. Here it will be re-tagged to bifurcate for Production environment.
+  - The instances/nodes running on staging should be destroyed after the production release cycle to save costs on Infra. ( Destruction of staging environment can be easily handled through Terraform )
+  - Also Production k8s nodes and AWS EC2 instances should be reserved instances to save costs.
+
