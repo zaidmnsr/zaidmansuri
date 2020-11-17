@@ -96,4 +96,6 @@
   - Also, can scale kubernetes pods based on custom metrics
   - Also can autoscale kubernetes node to accumulate the extra traffic
 
+#### Extra Points 2
 
+  - Above all strategy and deployment plan is based on AWS Cloud Services
