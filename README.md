@@ -90,4 +90,10 @@
   - For alerts, we can configure slack, email, etc from Grafana dashboard
   - For AWS components we can use AWS Cloudwatch to configure alerts and monitor the utilization as well.
 
+#### Extra Points 1
+
+  - Increase in user traffic can be handled through ingress Application Loadbalancer
+  - Also, can scale kubernetes pods based on custom metrics
+  - Also can autoscale kubernetes node to accumulate the extra traffic
+
 
