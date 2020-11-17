@@ -84,4 +84,10 @@
   - We will need to deploy filebeat as a sidecar container in microservices which will send logs to centralized server whcih is configured to Kibana dashboard.
   - Kibana dashboard will show the logs for all environments.
 
+### Objective 5
+
+  - For microservice monitoring we can deploy Prometheus and Grafana stack which will also monitor the Kubernetes cluster health
+  - For alerts, we can configure slack, email, etc from Grafana dashboard
+  - For AWS components we can use AWS Cloudwatch to configure alerts and monitor the utilization as well.
+
 
