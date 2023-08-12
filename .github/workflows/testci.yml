@@ -38,4 +38,6 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-          sh deploy.sh
+          cd /opt/django/test/blinkcrm
+          pip3 install -r req.txt
+          python3 manage.py runserver
