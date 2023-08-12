@@ -1,0 +1,43 @@
+{% extends 'base_main.html' %}   {% block page_content %}
+
+
+
+
+
+
+<table id="data-table" class="table">
+  <thead>
+      <tr>
+        <th scope="col">Idea</th>
+        <th scope="col">Mian Keyword</th>
+        <th scope="col">Channel</th>
+        <th scope="col">Status</th>
+      </tr>
+  </thead>
+  <tbody>
+    {% for y in yt %}
+      <tr>
+        <tr>
+          <th ><a href="{% url 'yt_app:yt_detail' y.id %}">{{y.yt_name}}</a></th>
+          <td colspan="2">{{y.yt_url}}</td>
+          <td>{{y.admin_yt}}</td>
+          <td>{{y.user_yt}}</td>
+          <td></td>
+        </tr>
+
+        {% endfor %}
+      </tr>
+  </tbody>
+  <tfoot>
+      <tr>
+          <th>...</th>
+      </tr>
+  </tfoot>
+</table>
+
+
+
+
+
+{% endblock page_content %}
+

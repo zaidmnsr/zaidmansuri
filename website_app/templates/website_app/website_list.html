@@ -1,0 +1,43 @@
+{% extends 'base_main.html' %}   {% block page_content %}
+
+
+
+
+
+
+<table id="data-table" class="table">
+  <thead>
+      <tr>
+        <th scope="col">Website Name</th>
+        <th scope="col">URL</th>
+        <th scope="col">Admin</th>
+        <th scope="col">User</th>
+      </tr>
+  </thead>
+  <tbody>
+    {% for w in website %}
+      <tr>
+        <tr>
+          <th ><a href="{% url 'website_app:website_detail' w.id %}">{{w.website_name}}</a></th>
+          <td colspan="2">{{w.website_url}}</td>
+          <td>{{w.admin_website}}</td>
+          <td>{{w.user_website}}</td>
+          <td></td>
+        </tr>
+
+        {% endfor %}
+      </tr>
+  </tbody>
+  <tfoot>
+      <tr>
+          <th>...</th>
+      </tr>
+  </tfoot>
+</table>
+
+
+
+
+
+{% endblock page_content %}
+
