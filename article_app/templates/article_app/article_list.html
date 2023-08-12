@@ -1,0 +1,44 @@
+{% extends 'base_main.html' %}   {% block page_content %}
+
+
+
+
+
+
+<table id="data-table" class="table">
+  <thead>
+      <tr>
+        <th scope="col" colspan="4">Article Name</th>
+        <th scope="col">Status</th>
+        <th scope="col">Keyword</th>
+        <th scope="col">DatePublished</th>
+      </tr>
+  </thead>
+  <tbody>
+    {% for a in article %}
+      <tr>
+        <tr>
+          <th colspan="4"><a href="{% url 'article_app:article_detail' a.id %}">{{a.article_name}}</a></th>
+         
+          <td>{{a.article_status}}</td>
+          <td>{{a.main_keyword}}</td>
+          <td ></td>
+          <td></td>
+        </tr>
+
+        {% endfor %}
+      </tr>
+  </tbody>
+  <tfoot>
+      <tr>
+          <th>...</th>
+      </tr>
+  </tfoot>
+</table>
+
+
+
+
+
+{% endblock page_content %}
+

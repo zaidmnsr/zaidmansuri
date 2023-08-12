@@ -1,0 +1,36 @@
+{% extends 'base_main.html' %}   {% load crispy_forms_tags %} 
+{% block page_content %}
+
+{{ form.media.css }}
+
+
+
+    <form action="" method="post" enctype="multipart/form-data">
+    
+
+      <div class="form-group">
+        {% csrf_token %}
+       
+        
+
+       
+        {{form|crispy}}
+
+       
+
+
+        <button  class="btn btn-primary">Update</button> 
+
+        
+    </div>
+   
+      
+    </form>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    {{ form.media.js }}
+
+    
+ 
+  
+  {% endblock page_content %}

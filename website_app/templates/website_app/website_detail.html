@@ -1,0 +1,37 @@
+{% extends 'base_main.html' %}   {% load crispy_forms_tags %} 
+{% block page_content %}
+  
+    <form action="" method="post" enctype="multipart/form-data">
+    
+
+      <div class="form-group">
+        {% csrf_token %}
+
+        {{form | crispy}}
+
+        <!-- {{form.website_name|as_crispy_field}}
+        {{form.website_url|as_crispy_field}}
+        {{form.admin_website|as_crispy_field}}
+        {{form.admin_pass|as_crispy_field}}
+        {{form.email_website|as_crispy_field}} -->
+
+        
+    </div>
+    <button  class="btn btn-primary">Update</button> 
+      
+    </form>
+
+
+
+    <script>
+
+      dselect(document.querySelector('#id_domain_provider') && document.querySelector('#id_hosting_provider'), {
+  
+          search: true
+      });
+  
+
+    
+  </script>
+  
+  {% endblock page_content %}
